@@ -1,6 +1,6 @@
 @if (loading) {
 <div class="loading loading-spinner"></div>
-}
+} @else {
 <div class="flex flex-wrap gap-2">
   @for (card of trafficCards; track $index) {
   <div class="flex flex-row items-center">
@@ -33,3 +33,4 @@
     </button>
   </div>
 </div>
+}
