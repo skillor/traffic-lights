@@ -1,0 +1,13 @@
+<form class="card w-96 bg-base-100 shadow-md">
+  <div class="card-body">
+    <div class="flex justify-between gap-2">
+      <input type="text" placeholder="Name" class="input text-3xl font-bold" (input)="onNameInput($event)" [value]="data.name" />
+      <div class="flex flex-row gap-1 items-center">
+        <input type="radio" name="radio-traffic-light" class="radio radio-error" [checked]="data.light == 'red'" (click)="data.light = 'red'; dataChange.emit(data)"/>
+        <input type="radio" name="radio-traffic-light" class="radio radio-warning" [checked]="data.light == 'yellow'" (click)="data.light = 'yellow'; dataChange.emit(data)"/>
+        <input type="radio" name="radio-traffic-light" class="radio radio-success" [checked]="data.light == 'green'" (click)="data.light = 'green'; dataChange.emit(data)"/>
+      </div>
+
+    </div>
+    <textarea class="textarea w-full" placeholder="Status" (input)="onStatusInput($event)" [value]="data.status"></textarea>
+</div>
